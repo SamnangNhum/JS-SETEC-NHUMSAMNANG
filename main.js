@@ -35,10 +35,10 @@ function deleleList(){
 		for(let i=0 ; i < allTask.length ; i++){
 			let allTaskVal = allTask[i].innerHTML.toLowerCase();
 			let newTaskVal = newTask.toLowerCase();
-			allTask[i].innerHTML == newTask ? existedBoolean = true : existedBoolean = false
+			allTaskVal == newTaskVal ? existedBoolean = true : existedBoolean = false
 		}
 		// Condition after checking 
-		if(existed){
+		if(existedBoolean){
 			alert('Value is Existed')
 		} else {
           	// create elements (li span span)
