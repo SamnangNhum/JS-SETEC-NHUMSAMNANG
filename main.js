@@ -19,7 +19,7 @@ function deleleList(){
 		})
 	};
 	}
-	
+	// Delete Function Fire
 	deleleList()
 // Add new task (FORM)
 
@@ -27,17 +27,17 @@ function deleleList(){
 	addForm.addEventListener('submit',function(e) {
 		// console.log("doing click");
 		e.preventDefault();
-		let existed;
+		let existedBoolean;
 		const newTask = addForm.querySelector('input[type="text"]').value;
-		
+		// Query All Element contain Class="name"
 		let allTask = allTasks.getElementsByClassName('name')
-		
+		// Checked Existed Value With Loop
 		for(let i=0 ; i < allTask.length ; i++){
 			let allTaskVal = allTask[i].innerHTML.toLowerCase();
 			let newTaskVal = newTask.toLowerCase();
-			allTask[i].innerHTML == newTask ? existed = true : existed = false
+			allTask[i].innerHTML == newTask ? existedBoolean = true : existedBoolean = false
 		}
-
+		// Condition after checking 
 		if(existed){
 			alert('Value is Existed')
 		} else {
@@ -62,6 +62,7 @@ function deleleList(){
 		// taskRow.appendChild(deleteTask);
 
 				allTasks.appendChild(taskRow);
+			// Delete Function Fire again for query new element
 				deleleList()
 		}
 			
